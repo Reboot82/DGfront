@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Course Name</th>
+      <th>Address</th>
+      <th>Difficulty</th>
+      <th class="text-right">Hole Count</th>
+    </tr>
+    <tr *ngFor="let course of courses">
+      <td>
+        <a [routerLink]="['/admin/view', course.id]">{{course.name}}</a>
+      </td>
+      <td>
+        {{course.address}}
+      </td>
+      <td>
+        {{course.difficulty}}
+      </td>
+      <td class="text-right">
+        {{course.holeNum}}
+      </td>
+    </tr>
+  </table>
+  <div class="row">
+    <a class="btn btn=primary" routerLink="">Home</a>
+  </div>
+</div>
